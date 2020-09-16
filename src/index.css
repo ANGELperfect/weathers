@@ -5,9 +5,113 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB );
+  background-size: 400% 400%;
+  animation: walk 10s ease-in-out infinite;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form{
+  width: 30%;
+  text-align: center;
+  background: #000;
+  min-height: 70vh;
+  padding-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: auto;
+}
+
+input[type="text"]{
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid white;
+  width: 100%;
+  display: block;
+  padding-bottom: 4px;
+  color: white ;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  font-size: 20px;
+  outline: none;
+}
+
+
+input[type="submit"]{
+  border: 0;
+  padding: 8px 20px;
+  margin: 0 2px;
+  border-radius: 2px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #000;
+  color: white;
+  font-weight: 100;
+}
+input[type="submit"]:focus{
+  outline: none;
+}
+input[type="submit"]:hover{
+  transition: 0.5s;
+  color: black;
+  background: white;
+}
+
+.weather{
+  background: #000;
+  text-align: left;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+.infoLabel{
+  color: white;
+  border-bottom: 0.5px solid white;
+  padding-bottom: 20px;
+  font-weight: 400;
+}
+.infoLabel:last-child{
+  border: 0;
+}
+
+.infoValue{
+  color: white;
+  font-weight: 200;
+}
+
+@keyframes walk{
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
+  }
+}
+
+@media (max-width: 703px){
+  .weather{
+    font-size: 13px;
+    font-weight: 200;
+    letter-spacing: 2px;
+  }
 }
